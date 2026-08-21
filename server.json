@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.hasdata/google-search",
+  "title": "HasData Google Search (SERP)",
+  "description": "Google SERP as JSON: organic, AI Overview, People Also Ask, AI Mode, news, shopping. No Cloud setup.",
+  "version": "1.0.0",
+  "websiteUrl": "https://hasdata.com/apis/google-serp-api",
+  "repository": { "url": "https://github.com/HasData/google-search-mcp", "source": "github" },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.hasdata.com/api/mcp?apis=google_serp",
+      "headers": [
+        { "name": "x-api-key", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+      ]
+    }
+  ]
+}
