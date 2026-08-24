@@ -1,11 +1,16 @@
 {
   "name": "@hasdata/google-search-mcp",
+  "mcpName": "com.hasdata/google-search",
   "version": "1.0.0",
-  "private": true,
-  "description": "Configuration and documentation for the HasData Google Search (SERP) MCP server",
+  "description": "MCP server for Google Search (SERP) through HasData's hosted API: organic results, AI Overview, People Also Ask, AI Mode, news, shopping, product and short videos. No Google Cloud project.",
+  "type": "module",
+  "bin": { "hasdata-google-search-mcp": "index.mjs" },
+  "files": ["index.mjs", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test" },
+  "dependencies": { "mcp-remote": "^0.1.43" },
+  "engines": { "node": ">=18" },
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/HasData/google-search-mcp.git" },
   "homepage": "https://hasdata.com/apis/google-serp-api",
-  "scripts": { "test": "node --test" },
-  "engines": { "node": ">=22" }
+  "keywords": ["mcp", "google-search", "google-serp", "serp", "google-search-mcp", "serp-mcp", "model-context-protocol", "hasdata", "scraper", "ai-overview"]
 }

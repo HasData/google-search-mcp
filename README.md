@@ -1,11 +1,14 @@
 # Google Search MCP Server (SERP)
 
+<!-- mcp-name: com.hasdata/google-search -->
+
 A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client eight read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
 
 ```
 https://mcp.hasdata.com/api/mcp?apis=google_serp
 ```
 
+[![Glama score](https://glama.ai/mcp/servers/HasData/google-search-mcp/badges/score.svg)](https://glama.ai/mcp/servers/HasData/google-search-mcp)
 [![tool contract](https://github.com/HasData/google-search-mcp/actions/workflows/contract.yml/badge.svg)](https://github.com/HasData/google-search-mcp/actions/workflows/contract.yml)
 [![MCP](https://img.shields.io/badge/MCP-remote%20%7C%20streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io)
 [![Tools](https://img.shields.io/badge/tools-8-10b981?style=flat-square)](#tools)
