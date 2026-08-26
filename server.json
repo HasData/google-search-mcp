@@ -3,15 +3,23 @@
   "name": "com.hasdata/google-search",
   "title": "HasData Google Search (SERP)",
   "description": "Google SERP as JSON: organic, AI Overview, People Also Ask, AI Mode, news, shopping. No Cloud setup.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://hasdata.com/apis/google-serp-api",
-  "repository": { "url": "https://github.com/HasData/google-search-mcp", "source": "github" },
+  "repository": {
+    "url": "https://github.com/HasData/google-search-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
       "url": "https://mcp.hasdata.com/api/mcp?apis=google_serp",
       "headers": [
-        { "name": "x-api-key", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+        {
+          "name": "x-api-key",
+          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
       ]
     }
   ],
@@ -19,20 +27,34 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/google-search-mcp",
-      "version": "1.0.0",
-      "transport": { "type": "stdio" },
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        { "name": "HASDATA_API_KEY", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+        {
+          "name": "HASDATA_API_KEY",
+          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
       ]
     },
     {
       "registryType": "pypi",
       "identifier": "hasdata-google-search-mcp",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "runtimeHint": "uvx",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        { "name": "HASDATA_API_KEY", "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.", "isRequired": true, "isSecret": true }
+        {
+          "name": "HASDATA_API_KEY",
+          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
       ]
     }
   ]

@@ -1,6 +1,6 @@
 [project]
 name = "hasdata-google-search-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "MCP server for Google Search (SERP) through HasData's hosted API. No Google Cloud project, no search-engine setup."
 readme = "README.md"
 requires-python = ">=3.10"
