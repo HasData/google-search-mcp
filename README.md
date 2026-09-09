@@ -4,6 +4,8 @@
 
 A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client eight read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
 
+**1,000 free credits every month, no card required**, which is 100 full-SERP calls or 200 of the 5-credit calls.
+
 ```
 https://mcp.hasdata.com/api/mcp?apis=google_serp
 ```
@@ -430,11 +432,11 @@ Results that carry data also carry a `requestMetadata.id` worth quoting in suppo
 
 Credits are per tool. The full SERP, AI Mode, News, Shopping and short videos cost **10 credits** a call. SERP Light, immersive product and the AI Overview tool are **5**. The AI Overview that comes inline with a SERP response is free, part of that 10-credit call, but expanding a token with the AI Overview tool, including every People Also Ask token, is a separate 5-credit call. Response size does not change the price.
 
-The free trial is **1,000 credits over 30 days with no card**, which is 100 full-SERP calls or 200 of the 5-credit calls. After that an active account keeps getting 100 credits topped up each day whenever its balance drops below 100, so a low-volume agent runs on the free tier indefinitely.
+The free tier is **1,000 credits every month with no card**, which is 100 full-SERP calls or 200 of the 5-credit calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
 Paid plans start at **$49 a month** for 200,000 credits. The price per credit falls with volume, and current numbers live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp).
 
-Your plan also sets concurrency. The free trial allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
+Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
 
 ## Tool selection
 
@@ -456,7 +458,7 @@ This server returns the live Google results page as a visitor sees it, parsed. T
 | Setup | A Cloud project and a search engine | One API key |
 | AI Overview and People Also Ask | Not returned | Inline, or by token |
 | Shopping, news, short videos, local | Not returned | Dedicated tools |
-| Free tier | 100 queries a day | 1,000 credits over 30 days, then a daily top-up |
+| Free tier | 100 queries a day | 1,000 credits every month |
 
 Two rows decide it. If you only need to search your own sites and want Google's official API for that, the Custom Search JSON API is the fit. If you need the real SERP, its AI Overview, or any of the panes Google shows a searcher, the official API does not return them and this does.
 
