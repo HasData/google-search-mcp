@@ -38,7 +38,7 @@ https://mcp.hasdata.com/api/mcp?apis=google_serp
 
 ## What you need
 
-An MCP client that speaks streamable HTTP with custom headers. A HasData API key from the [dashboard](https://app.hasdata.com/sign-up?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp), free to create with no card, and the trial covers about 100 to 200 calls depending on the tool. Nothing else. This is a remote server, so the simplest path is a URL and a header, with no Google Cloud project or Programmable Search Engine to set up. A stdio-only client can use the `@hasdata/google-search-mcp` (npm) or `hasdata-google-search-mcp` (PyPI) launcher instead.
+An MCP client that speaks streamable HTTP with custom headers. A HasData API key from the [dashboard](https://app.hasdata.com/sign-up?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp), free to create with no card, and the free tier covers about 100 to 200 calls a month depending on the tool. Nothing else. This is a remote server, so the simplest path is a URL and a header, with no Google Cloud project or Programmable Search Engine to set up. A stdio-only client can use the `@hasdata/google-search-mcp` (npm) or `hasdata-google-search-mcp` (PyPI) launcher instead.
 
 ## Quick start
 
