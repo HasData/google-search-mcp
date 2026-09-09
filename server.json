@@ -3,7 +3,7 @@
   "name": "com.hasdata/google-search",
   "title": "HasData Google Search (SERP)",
   "description": "Google SERP as JSON: organic, AI Overview, People Also Ask, AI Mode, news, shopping. No Cloud setup.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "websiteUrl": "https://hasdata.com/apis/google-serp-api",
   "repository": {
     "url": "https://github.com/HasData/google-search-mcp",
@@ -27,7 +27,7 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/google-search-mcp",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "transport": {
         "type": "stdio"
       },
@@ -43,7 +43,7 @@
     {
       "registryType": "pypi",
       "identifier": "hasdata-google-search-mcp",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
