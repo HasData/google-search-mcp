@@ -3,7 +3,7 @@
   "name": "com.hasdata/google-search",
   "title": "HasData Google Search (SERP)",
   "description": "Google SERP as JSON: organic, AI Overview, People Also Ask, AI Mode, news, shopping. No Cloud setup.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "websiteUrl": "https://hasdata.com/apis/google-serp-api",
   "repository": {
     "url": "https://github.com/HasData/google-search-mcp",
@@ -16,7 +16,7 @@
       "headers": [
         {
           "name": "x-api-key",
-          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
           "isRequired": true,
           "isSecret": true
         }
@@ -27,14 +27,14 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/google-search-mcp",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "transport": {
         "type": "stdio"
       },
       "environmentVariables": [
         {
           "name": "HASDATA_API_KEY",
-          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
           "isRequired": true,
           "isSecret": true
         }
@@ -43,7 +43,7 @@
     {
       "registryType": "pypi",
       "identifier": "hasdata-google-search-mcp",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
@@ -51,7 +51,7 @@
       "environmentVariables": [
         {
           "name": "HASDATA_API_KEY",
-          "description": "HasData API key, created at app.hasdata.com. The free trial needs no card.",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
           "isRequired": true,
           "isSecret": true
         }

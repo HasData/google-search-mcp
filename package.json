@@ -2,7 +2,7 @@
   "name": "@hasdata/google-search-mcp",
   "mcpName": "com.hasdata/google-search",
   "version": "1.0.1",
-  "description": "MCP server for Google Search (SERP) through HasData's hosted API: organic results, AI Overview, People Also Ask, AI Mode, news, shopping, product and short videos. No Google Cloud project.",
+  "description": "MCP server for Google Search (SERP) through HasData's hosted API: organic results, AI Overview, People Also Ask, AI Mode, news, shopping, product and short videos. No Google Cloud project. 1,000 free credits every month.",
   "type": "module",
   "bin": {
     "hasdata-google-search-mcp": "index.mjs"
