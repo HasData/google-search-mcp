@@ -218,6 +218,17 @@ The workflow leans on two chains. A SERP response hands back an `aiOverview` inl
 
 Eight tools, all read-only. Samples below are trimmed from real calls, and the results in them change as Google changes, so read them as shapes. Each tool name links to its endpoint reference.
 
+| Tool | Credits | What it returns |
+| :--- | :--- | :--- |
+| `hasdata_google_serp_serp_getSearchResults` | 10 | The full results page: organic results, AI Overview, People Also Ask, related searches, perspectives, immersive products, pagination |
+| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | 5 | The AI Overview for a token the SERP handed back, or a cited answer for a People Also Ask question |
+| `hasdata_google_serp_ai_mode_getAiModeResponse` | 10 | A Google AI Mode answer as text blocks with its references |
+| `hasdata_google_serp_serp_light_getSearchResults` | 5 | Organic results and the AI Overview without the extra blocks |
+| `hasdata_google_serp_news_getGoogleNews` | 10 | Google News results with source, date and thumbnail |
+| `hasdata_google_serp_shopping_getSearchResults` | 10 | Shopping results with price, rating, reviews, source and a per-product token |
+| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | 5 | One product across sellers: stores with prices, variants, reviews and insights |
+| `hasdata_google_serp_short_videos_getShortVideosSearchResults` | 10 | The short-video carousel with source, duration and thumbnail |
+
 The samples are the payload, not the whole response. A `tools/call` result carries one text block, and that text is itself JSON holding `url`, `status`, `text` and `json`, with the scraped data under `json`. From a raw JSON-RPC response the path is `result.content[0].text`, parsed, then `.json`. A chat client unwraps that for you and code talking to the endpoint directly does not.
 
 ### Google SERP
