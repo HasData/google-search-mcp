@@ -216,18 +216,18 @@ The workflow leans on two chains. A SERP response hands back an `aiOverview` inl
 
 ## Tools
 
-| Tool | Credits | What it returns |
-| :--- | :--- | :--- |
-| `hasdata_google_serp_ai_mode_getAiModeResponse` | 10 | The conversational response text, cited source links, subtopic breakdowns, follow-up suggestions, and a subsequentRequestToken for multi-turn continuation |
-| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | 5 | The AI-generated answer text, referenced source URLs, and expanded subtopic sections |
-| `hasdata_google_serp_events_getEventInformation` | 5 | Event title, start date/time, venue name and address, ticket/source links, description, and thumbnail |
-| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | 5 | Multi-store offers (merchant, price, shipping, condition, URL), product specs, images, ratings, and the nextPageToken |
-| `hasdata_google_serp_news_getGoogleNews` | 10 | Article title, snippet, source publisher, published date, thumbnail, and URL, plus tokens for navigating topics, sub-sections, and story clusters |
-| `hasdata_google_serp_product_getProductInformation` | 10 | Product title, images, price, ratings, specs, merchant offers (seller, shipping, condition, total price), and review text depending on searchType |
-| `hasdata_google_serp_serp_getSearchResults` | 10 | Organic results (title, link, snippet, position), ads, knowledge graph, related searches, People Also Ask, local pack, featured snippets, AI Overview pageToken, and rich… |
-| `hasdata_google_serp_serp_light_getSearchResults` | 5 | Organic results (title, link, displayed link, snippet, sitelinks, extensions, date, rating and review count), AI Overview with its text blocks and source references,… |
-| `hasdata_google_serp_shopping_getSearchResults` | 10 | Product title, price, merchant/source, rating, reviews count, thumbnail, product link, productId, immersiveProductPageToken, and filter chips with hasdata_link for… |
-| `hasdata_google_serp_short_videos_getShortVideosSearchResults` | 10 | Video title, thumbnail, duration, source platform, channel/creator, publish date, and direct video URL |
+| Tool | What it returns |
+| --- | --- |
+| `hasdata_google_serp_ai_mode_getAiModeResponse` | The conversational response text, cited source links, subtopic breakdowns, follow-up suggestions, and a subsequentRequestToken for multi-turn continuation. 10 credits a call |
+| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | The AI-generated answer text, referenced source URLs, and expanded subtopic sections. 5 credits a call |
+| `hasdata_google_serp_events_getEventInformation` | Event title, start date/time, venue name and address, ticket/source links, description, and thumbnail. 5 credits a call |
+| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | Multi-store offers (merchant, price, shipping, condition, URL), product specs, images, ratings, and the nextPageToken. 5 credits a call |
+| `hasdata_google_serp_news_getGoogleNews` | Article title, snippet, source publisher, published date, thumbnail, and URL, plus tokens for navigating topics, sub-sections, and story clusters. 10 credits a call |
+| `hasdata_google_serp_product_getProductInformation` | Product title, images, price, ratings, specs, merchant offers (seller, shipping, condition, total price), and review text depending on searchType. 10 credits a call |
+| `hasdata_google_serp_serp_getSearchResults` | Organic results (title, link, snippet, position), ads, knowledge graph, related searches, People Also Ask, local pack, featured snippets, AI Overview pageToken, and rich…. 10 credits a call |
+| `hasdata_google_serp_serp_light_getSearchResults` | Organic results (title, link, displayed link, snippet, sitelinks, extensions, date, rating and review count), AI Overview with its text blocks and source references,…. 5 credits a call |
+| `hasdata_google_serp_shopping_getSearchResults` | Product title, price, merchant/source, rating, reviews count, thumbnail, product link, productId, immersiveProductPageToken, and filter chips with hasdata_link for…. 10 credits a call |
+| `hasdata_google_serp_short_videos_getShortVideosSearchResults` | Video title, thumbnail, duration, source platform, channel/creator, publish date, and direct video URL. 10 credits a call |
 
 Ten tools, all read-only. Samples below are trimmed from real calls, and the results in them change as Google changes, so read them as shapes. Each tool name links to its endpoint reference.
 
