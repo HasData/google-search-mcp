@@ -216,18 +216,20 @@ The workflow leans on two chains. A SERP response hands back an `aiOverview` inl
 
 ## Tools
 
-Eight tools, all read-only. Samples below are trimmed from real calls, and the results in them change as Google changes, so read them as shapes. Each tool name links to its endpoint reference.
-
 | Tool | Credits | What it returns |
 | :--- | :--- | :--- |
-| `hasdata_google_serp_serp_getSearchResults` | 10 | The full results page: organic results, AI Overview, People Also Ask, related searches, perspectives, immersive products, pagination |
-| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | 5 | The AI Overview for a token the SERP handed back, or a cited answer for a People Also Ask question |
-| `hasdata_google_serp_ai_mode_getAiModeResponse` | 10 | A Google AI Mode answer as text blocks with its references |
-| `hasdata_google_serp_serp_light_getSearchResults` | 5 | Organic results and the AI Overview without the extra blocks |
-| `hasdata_google_serp_news_getGoogleNews` | 10 | Google News results with source, date and thumbnail |
-| `hasdata_google_serp_shopping_getSearchResults` | 10 | Shopping results with price, rating, reviews, source and a per-product token |
-| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | 5 | One product across sellers: stores with prices, variants, reviews and insights |
-| `hasdata_google_serp_short_videos_getShortVideosSearchResults` | 10 | The short-video carousel with source, duration and thumbnail |
+| `hasdata_google_serp_ai_mode_getAiModeResponse` | 10 | The conversational response text, cited source links, subtopic breakdowns, follow-up suggestions, and a subsequentRequestToken for multi-turn continuation |
+| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | 5 | The AI-generated answer text, referenced source URLs, and expanded subtopic sections |
+| `hasdata_google_serp_events_getEventInformation` | 5 | Event title, start date/time, venue name and address, ticket/source links, description, and thumbnail |
+| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | 5 | Multi-store offers (merchant, price, shipping, condition, URL), product specs, images, ratings, and the nextPageToken |
+| `hasdata_google_serp_news_getGoogleNews` | 10 | Article title, snippet, source publisher, published date, thumbnail, and URL, plus tokens for navigating topics, sub-sections, and story clusters |
+| `hasdata_google_serp_product_getProductInformation` | 10 | Product title, images, price, ratings, specs, merchant offers (seller, shipping, condition, total price), and review text depending on searchType |
+| `hasdata_google_serp_serp_getSearchResults` | 10 | Organic results (title, link, snippet, position), ads, knowledge graph, related searches, People Also Ask, local pack, featured snippets, AI Overview pageToken, and rich… |
+| `hasdata_google_serp_serp_light_getSearchResults` | 5 | Organic results (title, link, displayed link, snippet, sitelinks, extensions, date, rating and review count), AI Overview with its text blocks and source references,… |
+| `hasdata_google_serp_shopping_getSearchResults` | 10 | Product title, price, merchant/source, rating, reviews count, thumbnail, product link, productId, immersiveProductPageToken, and filter chips with hasdata_link for… |
+| `hasdata_google_serp_short_videos_getShortVideosSearchResults` | 10 | Video title, thumbnail, duration, source platform, channel/creator, publish date, and direct video URL |
+
+Ten tools, all read-only. Samples below are trimmed from real calls, and the results in them change as Google changes, so read them as shapes. Each tool name links to its endpoint reference.
 
 The samples are the payload, not the whole response. A `tools/call` result carries one text block, and that text is itself JSON holding `url`, `status`, `text` and `json`, with the scraped data under `json`. From a raw JSON-RPC response the path is `result.content[0].text`, parsed, then `.json`. A chat client unwraps that for you and code talking to the endpoint directly does not.
 
