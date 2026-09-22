@@ -447,9 +447,9 @@ Credits are per tool. The full SERP, AI Mode, News, Shopping and short videos co
 
 The free tier is **1,000 credits every month with no card**, which is 100 full-SERP calls or 200 of the 5-credit calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
-Paid plans start at **$49 a month** for 200,000 credits. The price per credit falls with volume, and current numbers live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp).
+Paid plans start at **$59 a month** for 200,000 credits. The price per credit falls with volume, and current numbers live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp).
 
-Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
+Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
 
 ## Tool selection
 
