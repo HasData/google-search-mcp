@@ -1,0 +1,26 @@
+---
+description: How to pull Google results, AI Overview, news and shopping through the HasData MCP server
+alwaysApply: false
+---
+
+# Google Search through HasData
+
+Ten tools over one endpoint. Pick by what the answer needs, because they differ in price and in payload.
+
+## Which tool
+
+`hasdata_google_serp_serp_getSearchResults` is the default: organic results, People Also Ask, related searches and the inline AI Overview when the page has one. `hasdata_google_serp_serp_light_getSearchResults` returns organic results only and costs half as little, so reach for it when the task is ten blue links.
+
+`hasdata_google_serp_news_getGoogleNews` for news, `hasdata_google_serp_shopping_getSearchResults` for products with prices, `hasdata_google_serp_short_videos_getShortVideosSearchResults` for Shorts and Reels, `hasdata_google_serp_ai_mode_getAiModeResponse` for the conversational answer with its citations.
+
+## Tokens, not ids
+
+Three tools expand something a search already returned, and they take a token rather than a query. `ai_overview` takes the `pageToken` of an AI Overview block, `immersive_product` takes the token on a shopping card, `events` takes the `pageToken` on an item in `eventsResults`. Run the search first, read the token out of the response, then call the tool. Tokens go stale, so a token from yesterday will not work today.
+
+## Localisation
+
+`location`, `gl` and `hl` decide what Google shows. A query without them is answered from wherever the request leaves from, which is rarely what the user meant. Ask for the market when the task is about a country, and pass `location` as Google writes it, for example `Austin,Texas,United States`.
+
+## What to watch
+
+An empty result set is a valid answer, not an error. `num` caps results per page and Google treats it as a hint. Every successful call spends credits from the connected HasData account, so one well-aimed search beats three broad ones.
