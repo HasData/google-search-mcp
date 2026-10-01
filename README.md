@@ -198,7 +198,7 @@ A client with OAuth support can instead add the URL as a custom connector and sk
 
 > For the same query, take each People Also Ask question and pull its AI Overview answer with sources.
 
-*One call per question, 5 credits each. Each `relatedQuestions` entry holds an `aiOverview.pageToken`, and the AI Overview tool turns that token into the answer blocks and their references.*
+*One call per question, 10 credits each. Each `relatedQuestions` entry holds an `aiOverview.pageToken`, and the AI Overview tool turns that token into the answer blocks and their references.*
 
 > Ask Google AI Mode `what is the Model Context Protocol` and give me the answer with its citations.
 
@@ -219,9 +219,9 @@ The workflow leans on two chains. A SERP response hands back an `aiOverview` inl
 | Tool | What it returns |
 | --- | --- |
 | `hasdata_google_serp_ai_mode_getAiModeResponse` | The conversational response text, cited source links, subtopic breakdowns, follow-up suggestions, and a subsequentRequestToken for multi-turn continuation. 10 credits a call |
-| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | The AI-generated answer text, referenced source URLs, and expanded subtopic sections. 5 credits a call |
-| `hasdata_google_serp_events_getEventInformation` | Event title, start date/time, venue name and address, ticket/source links, description, and thumbnail. 5 credits a call |
-| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | Multi-store offers (merchant, price, shipping, condition, URL), product specs, images, ratings, and the nextPageToken. 5 credits a call |
+| `hasdata_google_serp_ai_overview_getAiOverviewResponse` | The AI-generated answer text, referenced source URLs, and expanded subtopic sections. 10 credits a call |
+| `hasdata_google_serp_events_getEventInformation` | Event title, start date/time, venue name and address, ticket/source links, description, and thumbnail. 10 credits a call |
+| `hasdata_google_serp_immersive_product_getImmersive_e29f691177` | Multi-store offers (merchant, price, shipping, condition, URL), product specs, images, ratings, and the nextPageToken. 10 credits a call |
 | `hasdata_google_serp_news_getGoogleNews` | Article title, snippet, source publisher, published date, thumbnail, and URL, plus tokens for navigating topics, sub-sections, and story clusters. 10 credits a call |
 | `hasdata_google_serp_product_getProductInformation` | Product title, images, price, ratings, specs, merchant offers (seller, shipping, condition, total price), and review text depending on searchType. 10 credits a call |
 | `hasdata_google_serp_serp_getSearchResults` | Organic results (title, link, snippet, position), ads, knowledge graph, related searches, People Also Ask, local pack, featured snippets, AI Overview pageToken, and rich…. 10 credits a call |
