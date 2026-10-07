@@ -14,6 +14,7 @@ https://mcp.hasdata.com/mcp?apis=google_serp
 [![tool contract](https://github.com/HasData/google-search-mcp/actions/workflows/contract.yml/badge.svg)](https://github.com/HasData/google-search-mcp/actions/workflows/contract.yml)
 [![MCP](https://img.shields.io/badge/MCP-remote%20%7C%20streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io)
 [![Tools](https://img.shields.io/badge/tools-8-10b981?style=flat-square)](#tools)
+- [Prompts and resources](#prompts-and-resources)
 [![npm](https://img.shields.io/npm/v/@hasdata/google-search-mcp?style=flat-square&logo=npm&label=npm&color=cb3837)](https://www.npmjs.com/package/@hasdata/google-search-mcp)
 [![PyPI](https://img.shields.io/pypi/v/hasdata-google-search-mcp?style=flat-square&logo=pypi&logoColor=white&label=PyPI&color=3775a9)](https://pypi.org/project/hasdata-google-search-mcp/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
@@ -424,6 +425,35 @@ The short-video results Google shows for a query.
 | `deviceType` | string | | `desktop`, `mobile` or `tablet` |
 
 Returns `shortVideos`, each with `position`, `title`, `link`, `source`, `sourceLogo`, `profileName`, `duration`, `clip` and `thumbnail`.
+
+## Prompts and resources
+
+The server ships 5 prompts, ready-made workflows a client can offer instead of making the user compose a tool call.
+
+| Prompt | What it does |
+| --- | --- |
+| `google_search` | Search Google and summarize the top organic results. |
+| `google_news` | Find recent news coverage on a topic. |
+| `google_shopping` | Compare product offers from Google Shopping. |
+| `google_short_videos` | Find short videos about a topic. |
+| `google_ai_mode` | Get Google AI Mode's answer with its sources. |
+
+Alongside them the server exposes 10 resources, one per parameter whose accepted values are a fixed list. Reading one is cheaper than learning the vocabulary from a rejected call, and it costs no credits. Each URI is `hasdata://google_serp/<parameter>`.
+
+| Parameter | Values | What it selects |
+| --- | ---: | --- |
+| `gl` | 245 | The two-letter country code for the country you want to limit the search to. |
+| `hl` | 159 | The two-letter language code for the language you want to use for the search. |
+| `so` | 2 | Sort order for articles in a story. Use only with storyToken. |
+| `domain` | 195 | Google domain to use. Default is google.com. |
+| `searchType` | 3 | Parameter for fetching specific product information, such as 'offers', 'specs', or 'reviews'. |
+| `lr` | 43 | The 'lr' parameter specifies the language of the websites to return results from. This parameter filters results based on the language of the web content. |
+| `safe` | 2 | Adult Content Filtering option. |
+| `tbm` | 5 | Specify the type of search. |
+| `deviceType` | 3 | Specify the device type for the search. |
+| `cr` | 237 | The country code for the country you want to limit the search to. |
+
+Both lists are served without an API key, so a client can read them before a user has signed up.
 
 ## Errors and failure paths
 
