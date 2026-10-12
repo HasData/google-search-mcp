@@ -213,7 +213,7 @@ A client with OAuth support can instead add the URL as a custom connector and sk
 
 *Two calls, 10 credits each.*
 
-The workflow leans on two chains. A SERP response hands back an `aiOverview` inline and a `pageToken` on every People Also Ask question, so extracting Google's generative answers is either free with the search or one 5-credit follow-up per question. A shopping result likewise hands back a token per product, so the jump from a listing to its full multi-store card is a single call.
+The workflow leans on two chains. A SERP response hands back an `aiOverview` inline and a `pageToken` on every People Also Ask question, so extracting Google's generative answers is either free with the search or one 10-credit follow-up per question. A shopping result likewise hands back a token per product, so the jump from a listing to its full multi-store card is a single call.
 
 ## Tools
 
@@ -473,7 +473,7 @@ Results that carry data also carry a `requestMetadata.id` worth quoting in suppo
 
 ## Pricing, free tier and limits
 
-Credits are per tool. The full SERP, AI Mode, News, Shopping and short videos cost **10 credits** a call. SERP Light, immersive product and the AI Overview tool are **5**. The AI Overview that comes inline with a SERP response is free, part of that 10-credit call, but expanding a token with the AI Overview tool, including every People Also Ask token, is a separate 5-credit call. Response size does not change the price.
+Credits are per tool. The full SERP, AI Mode, News, Shopping, short videos, immersive product and the AI Overview tool cost **10 credits** a call. SERP Light is **5**. The AI Overview that comes inline with a SERP response is free, part of that 10-credit call, but expanding a token with the AI Overview tool, including every People Also Ask token, is a separate 10-credit call. Response size does not change the price.
 
 The free tier is **1,000 credits every month with no card**, which is 100 full-SERP calls or 200 of the 5-credit calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
