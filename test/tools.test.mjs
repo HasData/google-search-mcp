@@ -1,6 +1,6 @@
 // Tool contract test.
 //
-// The README documents eight tools and a specific parameter set for each. The upstream server
+// The README documents its tools and a specific parameter set for each. The upstream server
 // exposes two more under ?apis=google_serp (an events tool Google has effectively retired, and a
 // product tool that returns nothing), which this repo deliberately does not document. So the
 // checks below assert that the eight documented tools exist with the parameters claimed, rather
@@ -29,7 +29,7 @@ const SHOPPING = 'hasdata_google_serp_shopping_getSearchResults';
 const IMMERSIVE = 'hasdata_google_serp_immersive_product_getImmersive_e29f691177';
 const SHORT_VIDEOS = 'hasdata_google_serp_short_videos_getShortVideosSearchResults';
 
-// The eight tools the README documents, with the parameters it lists and whether each is required.
+// The tools the README documents, with the parameters it lists and whether each is required.
 const PARAMS = {
     [SERP]: { q: true, gl: false, hl: false, location: false, uule: false, num: false, start: false, tbm: false, tbs: false, deviceType: false },
     [AI_OVERVIEW]: { pageToken: true },

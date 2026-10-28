@@ -2,9 +2,9 @@
 
 <!-- mcp-name: com.hasdata/google-search -->
 
-A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client eight read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
+A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
 
-**1,000 free credits every month, no card required**, which is 100 full-SERP calls or 200 of the 5-credit calls.
+**1,000 free credits every month, no card required**, which is 100 full-SERP calls or 200 SERP Light calls.
 
 ```
 https://mcp.hasdata.com/mcp?apis=google_serp
@@ -475,7 +475,7 @@ Results that carry data also carry a `requestMetadata.id` worth quoting in suppo
 
 Credits are per tool. The full SERP, AI Mode, News, Shopping, short videos, immersive product and the AI Overview tool cost **10 credits** a call. SERP Light is **5**. The AI Overview that comes inline with a SERP response is free, part of that 10-credit call, but expanding a token with the AI Overview tool, including every People Also Ask token, is a separate 10-credit call. Response size does not change the price.
 
-The free tier is **1,000 credits every month with no card**, which is 100 full-SERP calls or 200 of the 5-credit calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
+The free tier is **1,000 credits every month with no card**, which is 100 full-SERP calls or 200 SERP Light calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
 Paid plans start at **$59 a month** for 200,000 credits. The price per credit falls with volume, and current numbers live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp).
 
@@ -483,9 +483,9 @@ Your plan also sets concurrency. The free tier allows 1 request at a time, Start
 
 ## Tool selection
 
-`?apis=google_serp` exposes these eight tools. The parameter takes a list, and `?apis=google_serp,google_maps` adds the Google Maps tools alongside search. Drop the parameter and you get everything HasData exposes, which is currently 57 tools.
+`?apis=google_serp` exposes these tools. The parameter takes a list, and `?apis=google_serp,google_maps` adds the Google Maps tools alongside search. Drop the parameter and you get every tool HasData exposes.
 
-A narrow list is usually the better default. A model choosing among eight tools picks correctly more often than one choosing among fifty-seven, and the tool descriptions themselves cost context on every turn.
+A narrow list is usually the better default. A model choosing among a few tools picks correctly more often than one choosing among the whole catalog, and the tool descriptions themselves cost context on every turn.
 
 ## How it compares
 
@@ -547,7 +547,7 @@ No. HasData is an independent service and is not affiliated with, endorsed by, o
 | :--- | :--- |
 | Product page and request builder | [Google SERP API](https://hasdata.com/apis/google-serp-api?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp) |
 | Server documentation | [MCP server docs](https://docs.hasdata.com/mcp-server?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp) |
-| All 57 tools in one server | [HasData/hasdata-mcp](https://github.com/HasData/hasdata-mcp) |
+| Every HasData tool in one server | [HasData/hasdata-mcp](https://github.com/HasData/hasdata-mcp) |
 | Client walkthroughs | [MCP clients and integrations](https://hasdata.com/integrations/mcp?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp) |
 | The other surfaces we parse | [53 more scraper APIs](https://hasdata.com/apis/?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp) |
 | Plans and credit costs | [Plans and credit costs](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp) |
@@ -559,7 +559,7 @@ No. HasData is an independent service and is not affiliated with, endorsed by, o
 
 This repository is configuration and documentation for a remote server. There is no build step and nothing to containerize.
 
-It does carry a contract test. The README documents eight tools with specific parameters, and the upstream tool list can change without a commit here, which would leave this file quietly lying to you. The test asserts the documented tools exist with the parameters claimed, and runs weekly in CI as well as on every push.
+It does carry a contract test. The README documents its tools with specific parameters, and the upstream tool list can change without a commit here, which would leave this file quietly lying to you. The test asserts the documented tools exist with the parameters claimed, and runs weekly in CI as well as on every push.
 
 ```bash
 HASDATA_API_KEY=your_key_here npm test
