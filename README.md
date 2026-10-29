@@ -2,7 +2,7 @@
 
 <!-- mcp-name: com.hasdata/google-search -->
 
-A hosted Model Context Protocol (MCP) server that gives Claude, Cursor, Windsurf and any other MCP client read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
+A hosted [Google Search MCP server](https://hasdata.com/mcp/google-serp?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp&utm_content=readme-intro) that gives Claude, Cursor, Windsurf and any other MCP client read-only Google Search tools. Pull the live SERP with its AI Overview and People Also Ask, run a Google AI Mode query, and read news, shopping, product detail and short-video results, all as structured JSON, with no Google Cloud project and no search-engine setup.
 
 **1,000 free credits every month, no card required**, which is 100 full-SERP calls or 200 SERP Light calls.
 
@@ -479,7 +479,7 @@ The free tier is **1,000 credits every month with no card**, which is 100 full-S
 
 Paid plans start at **$59 a month** for 200,000 credits. The price per credit falls with volume, and current numbers live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=google-search-mcp).
 
-Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
+Your plan also sets concurrency. The free tier allows 5 requests at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Concurrency is the only throttle. There is no separate requests-per-minute cap. Handle the overflow case defensively in anything unattended, because an agent that fans out across queries will reach the ceiling before you do.
 
 ## Tool selection
 
